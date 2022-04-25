@@ -1,0 +1,299 @@
+@import "./all_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@mixin heading-xl-bold {
+    font-size: $typography-heading-xl-bold-font-size;
+    text-decoration: $typography-heading-xl-bold-text-decoration;
+    font-weight: $typography-heading-xl-bold-font-weight;
+    font-style: $typography-heading-xl-bold-font-style;
+    font-stretch: $typography-heading-xl-bold-font-stretch;
+    letter-spacing: $typography-heading-xl-bold-letter-spacing;
+}
+
+@mixin heading-1-bold {
+    font-size: $typography-heading-1-bold-font-size;
+    text-decoration: $typography-heading-1-bold-text-decoration;
+    font-family: $typography-heading-1-bold-font-family;
+    font-weight: $typography-heading-1-bold-font-weight;
+    font-style: $typography-heading-1-bold-font-style;
+    font-stretch: $typography-heading-1-bold-font-stretch;
+    letter-spacing: $typography-heading-1-bold-letter-spacing;
+}
+
+@mixin heading-3-bold {
+    font-size: $typography-heading-3-bold-font-size;
+    text-decoration: $typography-heading-3-bold-text-decoration;
+    font-family: $typography-heading-3-bold-font-family;
+    font-weight: $typography-heading-3-bold-font-weight;
+    font-style: $typography-heading-3-bold-font-style;
+    font-stretch: $typography-heading-3-bold-font-stretch;
+    letter-spacing: $typography-heading-3-bold-letter-spacing;
+}
+
+@mixin body-text-02 {
+    font-size: $typography-heading-5-light-font-size;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $typography-paragraph-lead-font-family;
+    a {
+        color: $color-primary-500;
+    }
+}
+
+.logo-img {
+    margin: 25px 40px 85px 40px;
+    height: 60px;
+}
+
+.container-box {
+    width: 1070px;
+    padding: auto 40px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 80px;
+    .intro-paragraph,
+    p {
+        font-size: 26px;
+        line-height: 35px;
+        color: $color-grays-500;
+        font-weight: 200;
+        .emphasis {
+            font-weight: 700;
+        }
+    }
+}
+
+.heading-xl-bold {
+    @include heading-xl-bold;
+    font-size: 68px; //adjust
+    font-weight: 700; //adjust
+    color: $color-purple-900;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.heading-1-bold {
+    @include heading-1-bold;
+    color: $color-primary-500;
+    text-align: center;
+}
+
+.heading-3-bold {
+    @include heading-3-bold;
+}
+
+.selfie-checklist {
+    background-image: url("./img/Rectangle-1182.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    width: 1184px;
+    height: 444px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.10);
+    .sc-steps {
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: auto 50px;
+        @include body-text-02;
+        margin-bottom: 80px;
+        .cardItem {
+            text-align: center;
+            max-width: 300px;
+            max-height: 500px;
+            margin: 0px 30px;
+            //border: 1px solid black;
+            .card-img {
+                //background-color: red;
+                img {
+                    margin: 0 auto;
+                    max-width: 245px;
+                    min-height: 150px;
+                }
+            }
+            .orderNumber {
+                background-color: $color-purple-500;
+                width: 24px;
+                height: 24px;
+                color: #fff;
+                border-radius: 100%;
+                font-size: 13px;
+                margin: 0px auto 7px;
+            }
+        }
+    }
+}
+
+.inquiries {
+    color: $color-grays-500;
+    font-size: 26px;
+    font-weight: $typography-paragraph-body-2-font-weight;
+    text-align: center;
+    margin-bottom: 117px;
+    font-weight: 300;
+}
+
+.bttn {
+    min-width: 146px;
+    max-height: 46px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: $typography-heading-6-medium-font-weight;
+    font-size: $typography-paragraph-body-2-font-size;
+    margin: 5px;
+}
+
+.trial-block {
+    padding: 20px 25px;
+    width: 808px;
+    height: 644px;
+    //border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 10%);
+    margin: 60px auto;
+    /*   display: flex;
+    flex-direction: column; */
+    .drag-drop {
+        background-color: #dff1f1;
+        border: dashed #00847c 2.5px;
+        border-radius: 8px;
+        width: 760px;
+        height: 360px;
+        text-align: center;
+        h6 {
+            color: #838E94;
+        }
+        .img-upload {
+            border: solid 1px black;
+            width: 120px;
+            height: 120px;
+            margin: 45px auto;
+        }
+        .primary-btn {
+            border: 1px solid $color-blue-grays-100;
+            border-radius: 4px;
+            background-color: white;
+        }
+        .secondary-btn {
+            border: 1px solid $color-primary-500;
+            background-color: $color-primary-500;
+            color: white;
+        }
+    }
+    .selfie-note {
+        font-size: 17px;
+        font-weight: 300;
+        color: $color-grays-700;
+        line-height: 21px;
+        margin: 32px auto;
+    }
+    .disclaimer {
+        font-size: 15px;
+        color: #212121;
+        font-weight: 300;
+        /* .container-bx {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            user-select: none;
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #eee;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                }
+            }
+        } */
+    }
+    .final-actions {
+        text-align: right;
+        .main-btn {
+            min-height: 48px;
+            min-width: 102px;
+            padding: 12px 24px;
+            border: 1px solid $color-primary-500;
+            background-color: $color-primary-500;
+            border: none;
+            color: white;
+        }
+        .disabled {
+            background-color: $color-primary-100;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .selfie-checklist {
+        width: 95%;
+        height: auto;
+        .sc-steps {
+            flex-direction: column;
+            align-items: center;
+            .cardItem {
+                text-align: center;
+                width: 300px;
+                margin: auto 30px;
+                //border: 1px solid black;
+                margin: 15px auto;
+                .card-img {
+                    //background-color: red;
+                    img {
+                        margin: 0 auto;
+                        max-width: 150px;
+                        min-height: 150px;
+                    }
+                }
+            }
+        }
+    }
+    .trial-block {
+        width: auto;
+        height: auto;
+        .drag-drop {
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .selfie-checklist {
+        .sc-steps {
+            flex-direction: column;
+            justify-content: center;
+            .cardItem {
+                width: 300px;
+            }
+        }
+    }
+    .drag-drop {
+        min-height: 440px;
+    }
+}
