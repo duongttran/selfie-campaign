@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <h1 class="heading-1-bold">Facial Recognition Pilot Programme</h1>
-                <div class="heading-xl-bold">Selfie Submission</div>
+                <div class="heading-xl-bold">Submit your selfies here!</div>
                 <p class="intro-paragraph">The Data Science team is developing a facial recognition system that will allow for contactless entry to PETRONAS premises in future. To make the system efficient, this programme aims to collect as many selfies as possible from staff,
                     just like yourself.
                 </p>
@@ -35,7 +35,7 @@
 
         <div class="row">
             <div class="sc-steps">
-                <div class="col-md-4 col-sm-1">
+                <div class="col-md-4">
                     <div class="cardItem">
                         <div class="card-img"><img src="./img/Group-3197.svg" /></div>
                         <div class="orderNumber">1</div>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class=" col-md-4 col-sm-1">
+                <div class="col-md-4">
                     <div class="cardItem">
                         <div class="card-img"><img class="card-img" src="./img/Group-3190.svg" /></div>
                         <div class="orderNumber">2</div>
@@ -51,19 +51,16 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-1">
+                <div class="col-md-4">
                     <div class="cardItem">
                         <div class="card-img"><img src="./img/Group-3211.svg" /></div>
                         <div class="orderNumber">3</div>
                         <p class="body-text-02">Your selfie should be in colour. <br/>Do not use filters or flash.</p>
                         </di>
                     </div>
-
                 </div>
-
             </div>
         </div>
-    </div>
     </div>
 
     <div class="container">
@@ -77,10 +74,44 @@
                             <img src="./img/upload.svg" /></div>
                         <h3 class="heading-3-bold">Drag & drop images here.</h3>
                         <h6>Or browse files from your computer. Best is jpeg, png, heic or tiff.</h6>
+
                         <div class="actions">
-                            <button class="bttn primary-btn"><img src="./img/camera.svg"/>Open Webcam</button>
-                            <button class="bttn secondary-btn"><img src="./img/img.svg"/>Upload from Computer</button>
+                            <button class="bttn primary-btn">
+                                <img src="./img/camera.svg"/>Open Webcam
+                            </button>
+                            <button class="bttn secondary-btn" type="file" id="fileUpload"><img src="./img/img.svg" />Upload from Computer</button>
                         </div>
+                    </div>
+
+                    <div class="upload-selfie">
+                        <img src="./img/with-mask.svg" />
+                        <p>Selfie with Mask</p>
+                    </div>
+
+                    <div class="upload-selfie">
+                        <img src="./img/wo-mask.svg" />
+                        <p>Selfie without Mask</p>
+                    </div>
+
+                    <div class="upload-selfie selfie-with-progress-bar">
+
+                        <div class="selfie-info">
+                            <div class="selfie-attach">
+                                <img class="img-attach" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+                            </div>
+
+                            <div class="upload-title">
+                                <p>img 001.jpeg</p>
+                                <p>Uploading, 44kb/55kb</p>
+                            </div>
+
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="upload-progress"></div>
+                        </div>
+
+                        <img class="closeIcon" src="./img/close.svg" />
                     </div>
 
                     <div class="selfie-note">
@@ -88,12 +119,6 @@
                     </div>
 
                     <div class="disclaimer">
-
-                        <!-- <input type="checkbox" checked="checked">
-                    <label class="container-bx">I have read and agree to the Terms and Conditions.
-                        <span class="checkmark"></span>
-                    </label> -->
-
                         <label class="ctn">I have read and agree to the Terms and Conditions.
                         <input type="checkbox" checked="checked">
                         <span class="checkmark"></span>
@@ -101,21 +126,36 @@
 
                     </div>
 
-                    <div class="final-actions"><button class="bttn main-btn disabled">Submit</button></dic>
+                    <div class="final-actions"><button class="bttn main-btn disabled">Submit</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="trial-block">
+                    <div class="success-upload">
+                        <div class="img-upload">
+                            <img src="./img/success.svg" /></div>
+                        <h3 class="heading-3-bold">Your submission is successful!</h3>
+                        <h6>To submit more, come back again tomorrow.</h6>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
-                    <div class="inquiries">For inquiries, please contact XXX focal at XXX@petronas.com</div>
-                </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <div class="inquiries">For inquiries, please contact XXX focal at XXX@petronas.com</div>
             </div>
         </div>
+    </div>
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

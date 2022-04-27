@@ -41,15 +41,18 @@
 
 body {
     font-family: $typography-paragraph-lead-font-family;
-    background-image: url('./img/bgr.svg');
+    background-image: url("./img/bgr.svg");
     background-size: cover;
     a {
         color: $color-primary-500;
+        &:hover {
+            color: $color-primary-200;
+        }
     }
 }
 
 .logo-img {
-    margin: 25px 40px 85px 40px;
+    margin: 3%;
     height: 60px;
 }
 
@@ -100,14 +103,14 @@ body {
     margin: 0 auto;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.1);
     .sc-steps {
         margin: 20px auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         align-items: flex-start;
-        padding: auto 50px;
+        padding-left: 50px;
+        padding-right: 50px;
         @include body-text-02;
         margin-bottom: 80px;
         .cardItem {
@@ -159,15 +162,10 @@ body {
 .trial-block {
     padding: 20px 25px;
     width: 808px;
-    height: 644px;
-    //border: 1px solid black;
     border-radius: 4px;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 10%);
     margin: 60px auto;
-    /*   display: flex;
-    flex-direction: column; */
     h5 {
-        //margin-top: 20px;
         margin-bottom: 20px;
     }
     .drag-drop {
@@ -177,19 +175,7 @@ body {
         width: 760px;
         height: 360px;
         text-align: center;
-        h3 {
-            margin-bottom: 10px;
-        }
-        h6 {
-            color: #838E94;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
         .img-upload {
-            /* border: solid 1px black;
-            width: 120px;
-            height: 120px;
-            margin: 45px auto;*/
             img {
                 margin-top: 20px;
             }
@@ -212,6 +198,86 @@ body {
             background-color: $color-primary-500;
             color: white;
         }
+    }
+    .success-upload {
+        text-align: center;
+        padding: 5%;
+        .img-upload {
+            img {
+                margin: 5% auto;
+                max-width: 400px;
+            }
+        }
+    }
+    h3 {
+        margin-bottom: 10px;
+    }
+    h6 {
+        color: #838e94;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+    .upload-selfie {
+        margin: 20px 0;
+        padding: 10px;
+        //padding-right: 20px;
+        box-shadow: 1px 1px 2px $color-blue-grays-100;
+        display: flex;
+        align-items: center;
+        //justify-content: space-between;
+        p {
+            margin-bottom: 0px !important;
+            margin-left: 10px;
+        }
+        .selfie-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .selfie-attach {
+                width: 56px;
+                height: 56px;
+                border: 1px solid $color-blue-grays-100;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .img-attach {
+                    object-fit: cover;
+                    max-width: 40px;
+                    max-height: 35px;
+                }
+            }
+        }
+        .upload-title {
+            p:nth-child(2) {
+                color: $color-grays-300;
+            }
+        }
+        .progress-bar {
+            width: 165px;
+            height: 12px;
+            border-radius: 4px;
+            background-color: $color-grays-50;
+            margin-left: auto;
+            margin-right: 20px;
+            .upload-progress {
+                border-radius: 4px;
+                background-color: $color-yellow-800;
+                width: 165px;
+                max-width: 70%;
+                height: 12px;
+            }
+        }
+        .closeIcon {
+            max-width: 16px;
+            height: 16px;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+    }
+    .upload-selfie:last-child {
+        display: flex;
+        justify-content: space-between;
     }
     .selfie-note {
         font-size: 17px;
@@ -253,6 +319,7 @@ body {
                 }
                 &:checked~.checkmark {
                     background-color: #00a19c;
+                    border: solid 1px $color-primary-700;
                 }
                 &:checked~.checkmark:after {
                     display: block;
@@ -266,12 +333,14 @@ body {
             height: 25px;
             width: 25px;
             background-color: #eee;
+            border: solid 1px $color-grays-200;
+            border-radius: 4px;
             &:after {
                 content: "";
                 position: absolute;
                 display: none;
-                left: 9px;
-                top: 6px;
+                left: 8px;
+                top: 5px;
                 width: 7px;
                 height: 12px;
                 border: solid white;
@@ -308,7 +377,7 @@ body {
             align-items: center;
             .cardItem {
                 text-align: center;
-                width: 300px;
+                //width: 300px;
                 margin: auto 30px;
                 //border: 1px solid black;
                 margin: 15px auto;
@@ -328,22 +397,64 @@ body {
         height: auto;
         .drag-drop {
             width: auto;
-            height: auto;
+            height: 400;
         }
     }
 }
 
 @media (max-width: 1199px) {
+    .heading-xl-bold {
+        @include heading-xl-bold;
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+    }
+    .heading-1-bold {
+        @include heading-1-bold;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .container-box {
+        padding: auto 40px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
+        .intro-paragraph,
+        p {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
     .selfie-checklist {
         .sc-steps {
             flex-direction: column;
             justify-content: center;
-            .cardItem {
+            margin-bottom: 0px;
+        }
+    }
+    .trial-block {
+        .drag-drop {
+            min-height: 440px;
+            .img-upload {
+                margin-top: 5%;
+            }
+            h6 {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+    }
+    .success-upload {
+        text-align: center;
+        padding: 5%;
+        .img-upload {
+            img {
+                margin: 5% auto;
                 width: 300px;
             }
         }
     }
-    .drag-drop {
-        min-height: 440px;
+    .inquiries {
+        font-size: 20px;
     }
 }
