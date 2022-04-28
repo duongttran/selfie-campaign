@@ -409,9 +409,8 @@ body a:hover {
   }
 
   .trial-block .drag-drop {
-    min-height: 480px;
+    min-height: 500px;
     padding: 3%;
-    padding-bottom: 5%;
   }
   .trial-block .drag-drop .img-upload {
     margin-top: 5%;
