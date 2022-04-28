@@ -35,7 +35,7 @@ body a:hover {
   font-size: 26px;
   line-height: 35px;
   color: #525252;
-  font-weight: 200;
+  font-weight: 300;
 }
 .container-box .intro-paragraph .emphasis,
 .container-box p .emphasis {
@@ -398,8 +398,8 @@ body a:hover {
   }
   .container-box .intro-paragraph,
 .container-box p {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .selfie-checklist .sc-steps {
@@ -411,6 +411,7 @@ body a:hover {
   .trial-block .drag-drop {
     min-height: 480px;
     padding: 3%;
+    padding-bottom: 5%;
   }
   .trial-block .drag-drop .img-upload {
     margin-top: 5%;
