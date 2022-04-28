@@ -28,7 +28,7 @@ body a:hover {
   padding: auto 40px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 5%;
 }
 .container-box .intro-paragraph,
 .container-box p {
@@ -49,7 +49,7 @@ body a:hover {
   font-style: normal;
   font-stretch: normal;
   letter-spacing: -1.5;
-  font-size: 68px;
+  font-size: 62px;
   font-weight: 700;
   color: #461b6a;
   text-align: center;
@@ -84,11 +84,11 @@ body a:hover {
   background-size: cover;
   text-align: center;
   width: 1184px;
-  height: 444px;
+  height: 470px;
   margin: 0 auto;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.15);
 }
 .selfie-checklist .sc-steps {
   margin: 20px auto;
@@ -97,7 +97,7 @@ body a:hover {
   align-items: flex-start;
   padding-left: 50px;
   padding-right: 50px;
-  font-size: 18;
+  font-size: 18px;
   font-weight: 300;
   line-height: 22px;
   margin-bottom: 80px;
@@ -409,7 +409,8 @@ body a:hover {
   }
 
   .trial-block .drag-drop {
-    min-height: 440px;
+    min-height: 480px;
+    padding: 3%;
   }
   .trial-block .drag-drop .img-upload {
     margin-top: 5%;
@@ -421,11 +422,15 @@ body a:hover {
 
   .success-upload {
     text-align: center;
-    padding: 5%;
   }
   .success-upload .img-upload img {
     margin: 5% auto;
     width: 300px;
+  }
+
+  .selfie-attach {
+    width: 56px;
+    height: 56px;
   }
 
   .inquiries {

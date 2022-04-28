@@ -30,7 +30,7 @@
 }
 
 @mixin body-text-02 {
-    font-size: $typography-heading-5-light-font-size;
+    font-size: 18px;
     font-weight: 300;
     line-height: 22px;
 }
@@ -61,7 +61,7 @@ body {
     padding: auto 40px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 5%;
     .intro-paragraph,
     p {
         font-size: 26px;
@@ -76,8 +76,8 @@ body {
 
 .heading-xl-bold {
     @include heading-xl-bold;
-    font-size: 68px; //adjust
-    font-weight: 700; //adjust
+    font-size: 62px;
+    font-weight: 700;
     color: $color-purple-900;
     text-align: center;
     margin-bottom: 25px;
@@ -99,11 +99,11 @@ body {
     background-size: cover;
     text-align: center;
     width: 1184px;
-    height: 444px;
+    height: 470px;
     margin: 0 auto;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.15);
     .sc-steps {
         margin: 20px auto;
         display: flex;
@@ -118,9 +118,7 @@ body {
             max-width: 300px;
             max-height: 500px;
             margin: 0px 30px;
-            //border: 1px solid black;
             .card-img {
-                //background-color: red;
                 img {
                     margin: 0 auto;
                     max-width: 245px;
@@ -220,11 +218,9 @@ body {
     .upload-selfie {
         margin: 20px 0;
         padding: 10px;
-        //padding-right: 20px;
         box-shadow: 1px 1px 2px $color-blue-grays-100;
         display: flex;
         align-items: center;
-        //justify-content: space-between;
         p {
             margin-bottom: 0px !important;
             margin-left: 10px;
@@ -298,7 +294,6 @@ body {
             padding-left: 35px;
             margin-bottom: 12px;
             cursor: pointer;
-            //font-size: 22px;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -377,12 +372,9 @@ body {
             align-items: center;
             .cardItem {
                 text-align: center;
-                //width: 300px;
                 margin: auto 30px;
-                //border: 1px solid black;
                 margin: 15px auto;
                 .card-img {
-                    //background-color: red;
                     img {
                         margin: 0 auto;
                         max-width: 150px;
@@ -434,7 +426,8 @@ body {
     }
     .trial-block {
         .drag-drop {
-            min-height: 440px;
+            min-height: 480px;
+            padding: 3%;
             .img-upload {
                 margin-top: 5%;
             }
@@ -446,13 +439,16 @@ body {
     }
     .success-upload {
         text-align: center;
-        padding: 5%;
         .img-upload {
             img {
                 margin: 5% auto;
                 width: 300px;
             }
         }
+    }
+    .selfie-attach {
+        width: 56px;
+        height: 56px;
     }
     .inquiries {
         font-size: 20px;
