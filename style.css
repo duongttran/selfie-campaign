@@ -167,6 +167,11 @@ body a:hover {
 }
 .trial-block .drag-drop .img-upload img {
   margin-top: 20px;
+  transition: 0.5s;
+}
+.trial-block .drag-drop .img-upload img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
 }
 .trial-block .drag-drop .actions button img {
   margin-left: 0px;
@@ -189,6 +194,36 @@ body a:hover {
 .trial-block .success-upload .img-upload img {
   margin: 5% auto;
   max-width: 400px;
+  animation-name: example;
+  animation-duration: 2.5s;
+  animation-iteration-count: 2;
+  transition: 0.5s;
+}
+.trial-block .success-upload .img-upload img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+@keyframes example {
+  0% {
+    transform: scale(1);
+    transition: 0.05s;
+  }
+  25% {
+    transform: scale(1.2);
+    transition: 0.05s;
+  }
+  50% {
+    transform: scale(1);
+    transition: 0.05s;
+  }
+  75% {
+    transform: scale(1.2);
+    transition: 0.05s;
+  }
+  100% {
+    transform: scale(1);
+    transition: 0.05s;
+  }
 }
 .trial-block h3 {
   margin-bottom: 10px;
