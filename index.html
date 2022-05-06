@@ -69,7 +69,6 @@
             <div class="col-md-12">
                 <div class="trial-block">
                     <h5>Upload Image</h5>
-
                     <div class="drag-drop">
                         <div class="img-upload">
                             <img src="./img/upload.svg" /></div>
@@ -120,14 +119,15 @@
 
                     <div class="disclaimer">
                         <label class="ctn">I have read and agree to the Terms and Conditions.
-                        <input type="checkbox" checked="checked">
+                        <!-- <input type="checkbox" checked="checked"> -->
+                        <input type="checkbox" id="checkbox"  onclick="tickBox()">
                         <span class="checkmark"></span>
                     </label>
 
                     </div>
 
                     <div class="final-actions">
-                        <button class="bttn main-btn disabled">Submit</button>
+                        <button class="bttn main-btn disabled" id="submitBtn" onclick="submitSelfie()">Submit</button>
                     </div>
                 </div>
             </div>
