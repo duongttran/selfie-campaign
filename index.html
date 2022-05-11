@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <img class="logo-img" src="./img/logo.svg" />
 
     <div class="container-box container">
@@ -64,54 +63,63 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="trial-block">
-                    <h5>Upload Image</h5>
-                    <div class="drag-drop">
-                        <div class="img-upload">
-                            <img src="./img/upload.svg" /></div>
-                        <h3 class="heading-3-bold">Drag & drop images here.</h3>
-                        <h6>Or browse files from your computer. Best is jpeg, png, heic or tiff.</h6>
+    <form id="file-upload-form" class="uploader">
 
-                        <div class="actions">
-                            <button class="bttn primary-btn">
-                                <img src="./img/camera.svg"/>Open Webcam
-                            </button>
-                            <button class="bttn secondary-btn" type="file" id="fileUpload"><img src="./img/img.svg" />Upload from Computer</button>
-                        </div>
-                    </div>
+        <h5>Upload Image</h5>
+        <div class="drag-drop">
+            <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
 
-                    <div class="upload-selfie">
-                        <img src="./img/with-mask.svg" />
-                        <p>Selfie with Mask</p>
-                    </div>
+            <label for="file-upload" id="file-drag">
 
-                    <div class="upload-selfie">
-                        <img src="./img/wo-mask.svg" />
-                        <p>Selfie without Mask</p>
-                    </div>
+        <img id="file-image" src="#" alt="Preview" class="hidden">
 
-                    <div class="selfie-note">
-                        Your selfie images will be kept strictly private and confidential, and solely for the purpose of the Facial Recognition Model development. Read the full Terms & Conditions <a href="#">here</a>.
-                    </div>
-
-                    <div class="disclaimer">
-                        <label class="ctn">I have read and agree to the Terms and Conditions.
-                        <input type="checkbox" id="checkbox"  onclick="tickBox()">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    </div>
-
-                    <div class="final-actions">
-                        <button class="bttn main-btn disabled" id="submitBtn" onclick="submitSelfie()">Submit</button>
-                    </div>
-                </div>
-            </div>
+        <div id="start">
+          <div class="img-upload">
+            <img src="./img/upload.svg" />
+          </div>
+          <h3 class="heading-3-bold">Drag & drop images here.</h3>
+          <h6>Or browse files from your computer. Best is jpeg, png, heic or tiff.</h6>
+          <div id="notimage" class="hidden">Please select an image</div>
+          <span class="bttn primary-btn"><img src="./img/camera.svg"/>Open webcam</span>
+          <span id="file-upload-btn" class="bttn secondary-btn"><img src="./img/img.svg" />Upload image</span>
         </div>
-    </div>
+
+        <div id="response" class="hidden">
+          <div id="messages"></div>
+          <progress class="progress" id="file-progress" value="0">
+            <span>0</span>%
+          </progress>
+        </div>
+
+      </label>
+        </div>
+
+        <div class="upload-selfie">
+            <img src="./img/with-mask.svg" />
+            <p>1. Selfie with Mask</p>
+        </div>
+
+        <div class="upload-selfie">
+            <img src="./img/wo-mask.svg" />
+            <p>2. Selfie without Mask</p>
+        </div>
+
+        <div class="selfie-note">
+            Your selfie images will be kept strictly private and confidential, and solely for the purpose of the Facial Recognition Model development. Read the full Terms & Conditions <a href="#">here</a>.
+        </div>
+
+        <div class="disclaimer">
+            <label class="ctn">I have read and agree to the Terms and Conditions.
+        <input type="checkbox" id="checkbox" onclick="tickBox()">
+        <span class="checkmark"></span>
+      </label>
+        </div>
+
+        <div class="final-actions">
+            <button class="bttn main-btn disabled" id="submitBtn" onclick="submitSelfie()">Submit</button>
+        </div>
+
+    </form>
 
     <div class="container hideBox">
         <div class="row justify-content-center">
@@ -137,7 +145,6 @@
     </div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
