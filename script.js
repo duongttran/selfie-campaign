@@ -1,12 +1,9 @@
 let submitBtn = document.getElementById("submitBtn");
-
 let checkBox = document.getElementById("checkbox");
-
 let trialBox = document.getElementsByClassName("trial-block")[0]
-
 let hideBox = document.getElementsByClassName("hideBox")[0]
+hideBox.style.display = "none";
 
-hideBox.style.display = "none"
 
 function tickBox() {
     console.log("tickkkkk the boxxxxx")
@@ -16,8 +13,8 @@ function tickBox() {
     } else {
         submitBtn.classList.add("disabled")
         submitBtn.disabled = true;
-
     }
+
 }
 
 function submitSelfie() {
