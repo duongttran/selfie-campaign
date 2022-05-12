@@ -1,3 +1,34 @@
+/* Checkbox and submit */
+let submitBtn = document.getElementById("submitBtn");
+let checkBox = document.getElementById("checkbox");
+let hideBox = document.getElementById("hideBox");
+let uploadBox = document.getElementById("uploadBox");
+
+hideBox.style.display = "none";
+
+const submitSelfie = (e) => {
+    if (confirm("Are you sure you want to submit?") == true) {
+        uploadBox.style.display = "none"
+        hideBox.style.display = "block"
+        e.preventDefault();
+    }
+};
+
+function tickBox(e) {
+    console.log("tickkkkk the boxxxxx");
+    if (checkBox.checked === true) {
+        submitBtn.classList.remove("disabled");
+        submitBtn.disabled = false;
+        submitBtn.addEventListener('click', submitSelfie);
+        e.preventDefault();
+    } else {
+        submitBtn.classList.add("disabled");
+        submitBtn.disabled = true;
+        submitBtn.removeEventListener('click', submitSelfie);
+        e.preventDefault();
+    }
+}
+
 // File Upload
 // 
 function ekUpload() {
@@ -139,6 +170,3 @@ function ekUpload() {
     }
 }
 ekUpload();
-
-
-/* Checkbox and submit */
