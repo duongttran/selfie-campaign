@@ -1,6 +1,5 @@
 @import "./all_variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @mixin heading-xl-bold {
     font-size: $typography-heading-xl-bold-font-size;
     text-decoration: $typography-heading-xl-bold-text-decoration;
@@ -46,13 +45,6 @@ body {
     background-size: cover;
 }
 
-a {
-    color: $color-primary-500!important;
-    &:hover {
-        color: $color-primary-200!important;
-    }
-}
-
 h3 {
     margin: 10px auto;
 }
@@ -63,6 +55,13 @@ h6 {
     margin-bottom: 5%;
     font-weight: 400;
     font-size: 16px;
+}
+
+a {
+    color: $color-primary-500 !important;
+    &:hover {
+        color: $color-primary-200 !important;
+    }
 }
 
 p {
@@ -91,6 +90,24 @@ p {
 .logo-img {
     margin: 3%;
     height: 60px;
+}
+
+.bttn {
+    /*  min-width: 146px; */
+    display: inline-block;
+    max-height: 46px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: $typography-heading-6-medium-font-weight;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    img {
+        vertical-align: middle;
+        margin-right: 5px;
+        margin-bottom: 3px;
+    }
 }
 
 .container-box {
@@ -437,23 +454,6 @@ p {
     input[type="file"] {
         display: none;
     }
-    .bttn {
-        /*  min-width: 146px; */
-        display: inline-block;
-        max-height: 46px;
-        border-radius: 4px;
-        padding: 8px 16px;
-        font-weight: $typography-heading-6-medium-font-weight;
-        font-size: 16px;
-        margin: 5px;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        img {
-            vertical-align: middle;
-            margin-right: 5px;
-            margin-bottom: 3px;
-        }
-    }
 }
 
 .inquiries {
@@ -498,6 +498,7 @@ p {
             justify-content: center;
             margin-bottom: 0px;
             .cardItem {
+                margin: 5% auto;
                 .body-text-02 {
                     font-size: 14px;
                     text-align: center;
