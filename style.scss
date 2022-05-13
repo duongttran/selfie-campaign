@@ -60,6 +60,8 @@ h6 {
     margin-bottom: 5%;
     font-weight: 400;
     font-size: 16px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 a {
@@ -245,6 +247,12 @@ p {
         clear: both;
         width: 100%;
         &.hidden {
+            display: none;
+        }
+        .large-view {
+            display: block;
+        }
+        .small-view {
             display: none;
         }
         .img-upload {
@@ -448,7 +456,7 @@ p {
         clear: both;
         margin: 0 auto;
         width: 100%;
-        max-width: 180px;
+        max-width: 165px;
         height: 8px;
         border: 0;
         border-radius: 4px;
@@ -483,6 +491,31 @@ p {
 
 
 /* Media queries */
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .heading-xl-bold {
+        @include heading-xl-bold;
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+    .heading-1-bold {
+        @include heading-1-bold;
+        font-size: 1rem;
+        line-height: 24px;
+    }
+    .selfie-checklist {
+        .sc-steps {
+            justify-content: center;
+            .cardItem {
+                max-width: 200px;
+                .body-text-02 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 480px) {
     .heading-xl-bold {
@@ -532,6 +565,12 @@ p {
             flex-wrap: wrap;
             .img-upload {
                 margin-top: 5%;
+            }
+            .large-view {
+                display: none!important;
+            }
+            .small-view {
+                display: block!important;
             }
             h6 {
                 padding-left: 40px;

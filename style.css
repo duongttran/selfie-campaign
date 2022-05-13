@@ -27,6 +27,8 @@ h6 {
   margin-bottom: 5%;
   font-weight: 400;
   font-size: 16px;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 a {
@@ -225,6 +227,12 @@ p {
 .uploader #start.hidden {
   display: none;
 }
+.uploader #start .large-view {
+  display: block;
+}
+.uploader #start .small-view {
+  display: none;
+}
 .uploader #start .img-upload img {
   transition: all 0.2s ease-in-out;
 }
@@ -420,7 +428,7 @@ p {
   clear: both;
   margin: 0 auto;
   width: 100%;
-  max-width: 180px;
+  max-width: 165px;
   height: 8px;
   border: 0;
   border-radius: 4px;
@@ -453,6 +461,41 @@ p {
 }
 
 /* Media queries */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .heading-xl-bold {
+    font-size: 68;
+    text-decoration: none;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -1.5;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+
+  .heading-1-bold {
+    font-size: 42;
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    font-size: 1rem;
+    line-height: 24px;
+  }
+
+  .selfie-checklist .sc-steps {
+    justify-content: center;
+  }
+  .selfie-checklist .sc-steps .cardItem {
+    max-width: 200px;
+  }
+  .selfie-checklist .sc-steps .cardItem .body-text-02 {
+    font-size: 14px;
+  }
+}
 @media (max-width: 480px) {
   .heading-xl-bold {
     font-size: 68;
@@ -516,6 +559,12 @@ p {
   }
   .uploader .drag-drop .img-upload {
     margin-top: 5%;
+  }
+  .uploader .drag-drop .large-view {
+    display: none !important;
+  }
+  .uploader .drag-drop .small-view {
+    display: block !important;
   }
   .uploader .drag-drop h6 {
     padding-left: 40px;
