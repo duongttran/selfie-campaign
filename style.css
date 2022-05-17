@@ -21,16 +21,6 @@ h3 {
   margin: 10px auto;
 }
 
-h6 {
-  color: #838e94;
-  margin-top: 10px;
-  margin-bottom: 5%;
-  font-weight: 400;
-  font-size: 16px;
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
-
 a {
   color: #00a19c !important;
 }
@@ -227,17 +217,24 @@ p {
 .uploader #start.hidden {
   display: none;
 }
+.uploader #start .img-upload img {
+  transition: all 0.2s ease-in-out;
+}
+.uploader #start .img-upload img:hover {
+  transform: scale(1.2);
+}
 .uploader #start .large-view {
   display: block;
 }
 .uploader #start .small-view {
   display: none;
 }
-.uploader #start .img-upload img {
-  transition: all 0.2s ease-in-out;
-}
-.uploader #start .img-upload img:hover {
-  transform: scale(1.2);
+.uploader #start h6 {
+  color: #838e94;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 .uploader #start .primary-btn {
   border: 1px solid #d3dee8;
@@ -311,15 +308,79 @@ p {
   } */
 }
 .uploader .upload-selfie {
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 10px;
-  box-shadow: 1px 1px 2px #d3dee8;
+  box-shadow: 1px 1px 2px 1px #d3dee8;
   display: flex;
   align-items: center;
 }
 .uploader .upload-selfie p {
-  margin-left: 10px;
-  margin-bottom: 0;
+  margin: auto 10px;
+}
+.uploader .upload-selfie .selfie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.uploader .upload-selfie .selfie-info .selfie-attach {
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  border: 1px solid #d3dee8;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.uploader .upload-selfie .selfie-info .selfie-attach .img-attach {
+  object-fit: cover;
+  max-width: 40px;
+  max-height: 35px;
+  vertical-align: middle;
+}
+.uploader .upload-selfie .upload-title {
+  width: 20rem;
+  word-wrap: break-word;
+}
+.uploader .upload-selfie .upload-title p {
+  margin: 5px 0;
+}
+.uploader .upload-selfie .upload-title .upload-status {
+  color: #a8a8a8;
+  font-weight: 200;
+}
+.uploader .upload-selfie .progress-bar {
+  width: 165px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.uploader .upload-selfie .progress-bar .upload-progress {
+  border-radius: 4px;
+  background-color: #fca216;
+  width: 165px;
+  max-width: 70%;
+  height: 12px;
+}
+.uploader .upload-selfie .closeIcon {
+  max-width: 16px;
+  height: 16px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.uploader .upload-with-progress {
+  display: flex;
+  justify-content: space-evenly;
+}
+.uploader .selfie-note {
+  font-size: 17px;
+  font-weight: 300;
+  color: #262626;
+  line-height: 21px;
+  margin: 32px auto;
 }
 .uploader .selfie-note {
   font-size: 17px;
@@ -404,9 +465,10 @@ p {
   background-color: #b3e3e1;
 }
 .uploader #file-image {
+  border: 2px solid black;
   display: inline;
-  margin: 0 auto 0.5rem auto;
-  width: auto;
+  margin: auto;
+  width: 40px;
   height: auto;
   max-width: 80px;
 }
@@ -424,15 +486,15 @@ p {
 }
 .uploader progress,
 .uploader .progress {
+  border-radius: 4px;
+  background-color: #eee;
   display: inline;
   clear: both;
   margin: 0 auto;
   width: 100%;
   max-width: 165px;
-  height: 8px;
+  height: 12px;
   border: 0;
-  border-radius: 4px;
-  background-color: #eee;
   overflow: hidden;
 }
 .uploader .progress[value]::-webkit-progress-bar {
@@ -567,8 +629,7 @@ p {
     display: block !important;
   }
   .uploader .drag-drop h6 {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 5% 40px;
   }
 
   .success-upload {
@@ -580,8 +641,9 @@ p {
   }
 
   .selfie-attach {
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
+    width: 100%;
   }
 
   .inquiries {

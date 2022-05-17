@@ -86,7 +86,7 @@ function ekUpload() {
 
         console.log(file.name);
         output(
-            '<strong>' + encodeURI(file.name) + '</strong>'
+            '<p>' + encodeURI(file.name) + '</p>'
         );
 
         // var fileType = file.type;

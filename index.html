@@ -44,7 +44,8 @@
                             <div class="card-img"><img src="./img/Group-3197.svg" /></div>
                             <div class="orderNumber">1</div>
                             <p class="body-text-02">Upload 2 selfies per submission: 1 with face mask, 1 without.
-                                <i>Note: You can only make1 submission a day.</i></p>
+                                <i>Note: You can only make1 submission a day.</i>
+                            </p>
                             </p>
                         </div>
                     </div>
@@ -84,14 +85,17 @@
                     <div class="drag-drop">
                         <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
                         <label for="file-upload" id="file-drag">
+
                             <div id="start">
                                 <div class="img-upload">
                                     <img src="./img/upload.svg" />
                                 </div>
                                 <h3 class="heading-3-bold large-view">Drag & drop images here.</h3>
                                 <h3 class="heading-3-bold small-view">Tap to upload images</h3>
-                                <h6 class="large-view">Or browse files from your computer. Best is jpeg, png, heic or tiff.</h6>
-                                <h6 class="small-view">Or browse files from your phone. Best is jpeg, png, heic or tiff.</h6>
+                                <h6 class="large-view">Or browse files from your computer. Best is jpeg, png, heic or
+                                    tiff.</h6>
+                                <h6 class="small-view">Or browse files from your phone. Best is jpeg, png, heic or tiff.
+                                </h6>
                                 <div id="notimage" class="hidden">Please select an image</div>
                                 <span class="bttn primary-btn"><img src="./img/camera.svg" />Open webcam</span>
                                 <span id="file-upload-btn" class="bttn secondary-btn"><img src="./img/img.svg" />Upload
@@ -100,15 +104,61 @@
                         </label>
                     </div>
 
-                    <img id="file-image" src="#" alt="Preview" class="hidden">
+                    <!-- <img id="file-image" src="#" alt="Preview" class="hidden">
+
                     <div id="response" class="hidden">
                         <div id="messages"></div>
                         <progress class="progress" id="file-progress" value="0">
                             <span>0</span>%
                         </progress>
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
+
+            <!-- Standard uploadinggggg trialllll-->
+
+            <div class="upload-selfie upload-with-progress" id="upload-with-bar">
+                <div class="selfie-info">
+                    <div class="selfie-attach">
+                        <img id="file-image" src="#" alt="Preview" class="hidden">
+                    </div>
+
+                    <div class="upload-title">
+                        <div id="response" class="hidden">
+                            <p id="messages"></p>
+                        </div>
+                        <!-- <p>img 001.jpeg</p> -->
+                        <p class="upload-status">Uploading, 44kb/55kb</p>
+                    </div>
+                </div>
+                <progress class="progress" id="file-progress" value="0"><span>0</span>%</progress>
+                <img class="closeIcon" src="./img/close.svg" />
+            </div>
+
+            <!-- Standard uploadinggggg trialllll endddd-->
+
+
+            <!-- Standard uploadinggggg -->
+
+            <!-- <div class="upload-selfie upload-with-progress">
+                <div class="selfie-info">
+                    <div class="selfie-attach">
+                        <img class="img-attach" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+                    </div>
+                    <div class="upload-title">
+                        <p>img 001.jpeg</p>
+                        <p>Uploading, 44kb/55kb</p>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="upload-progress"></div>
+                </div>
+                <img class="closeIcon" src="./img/close.svg" />
+            </div> -->
+
+            <!-- Standard uploadinggggg endddd-->
+
 
             <div class="row">
                 <div class="col-md-12">
