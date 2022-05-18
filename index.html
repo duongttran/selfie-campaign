@@ -119,6 +119,7 @@
             <!-- Standard uploadinggggg trialllll-->
 
             <div class="upload-selfie upload-with-progress" id="upload-with-bar">
+
                 <div class="selfie-info">
                     <div class="selfie-attach">
                         <img id="file-image" src="#" alt="Preview" class="hidden">
@@ -132,33 +133,14 @@
                         <p class="upload-status">Uploading, 44kb/55kb</p>
                     </div>
                 </div>
+
                 <progress class="progress" id="file-progress" value="0"><span>0</span>%</progress>
-                <img class="closeIcon" src="./img/close.svg" />
+
+                <img class="closeIcon" id="closeIcon" onclick="removeUpload()" src="./img/close.svg" />
+
             </div>
 
             <!-- Standard uploadinggggg trialllll endddd-->
-
-
-            <!-- Standard uploadinggggg -->
-
-            <!-- <div class="upload-selfie upload-with-progress">
-                <div class="selfie-info">
-                    <div class="selfie-attach">
-                        <img class="img-attach" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
-                    </div>
-                    <div class="upload-title">
-                        <p>img 001.jpeg</p>
-                        <p>Uploading, 44kb/55kb</p>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div class="upload-progress"></div>
-                </div>
-                <img class="closeIcon" src="./img/close.svg" />
-            </div> -->
-
-            <!-- Standard uploadinggggg endddd-->
-
 
             <div class="row">
                 <div class="col-md-12">
@@ -179,7 +161,7 @@
             </div>
 
             <div class="selfie-note">
-                Your selfie images will be kept strictly private and confidential, and solely for the purpose of the Facial Recognition Model development. Read the full Terms & Conditions <a href="#">here</a>.
+                Your selfie images will be kept strictly private and confidential, and solely for the purpose of the Facial Recognition Model development. Read the full Terms & Conditions <a href="#/">here</a>.
             </div>
 
             <div class="disclaimer">

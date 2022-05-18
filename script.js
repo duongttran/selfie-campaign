@@ -3,14 +3,20 @@ let submitBtn = document.getElementById("submitBtn");
 let checkBox = document.getElementById("checkbox");
 let hideBox = document.getElementById("hideBox");
 let uploadBox = document.getElementById("uploadBox");
+let closeIcon = document.getElementById("closeIcon");
+let uploadWithBar = document.getElementById("upload-with-bar");
 
 hideBox.style.display = "none";
+uploadWithBar.style.display = "none";
 
 const submitSelfie = (e) => {
     if (confirm("Are you sure you want to submit?") == true) {
         uploadBox.style.display = "none"
         hideBox.style.display = "block"
         e.preventDefault();
+        submitBtn.classList.add("disabled");
+        submitBtn.disabled = true;
+        checkBox.checked = false;
     }
 };
 
@@ -29,8 +35,15 @@ function tickBox(e) {
     }
 }
 
-// File Upload
-// 
+function removeUpload() {
+    if (confirm("Are you sure you want to remove your upload?")) {
+        uploadWithBar.style.display = "none";
+    }
+
+}
+
+/* File Upload */
+
 function ekUpload() {
     function Init() {
 
@@ -95,9 +108,10 @@ function ekUpload() {
 
         var isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(imageName);
         if (isGood) {
-            document.getElementById('start').classList.add("hidden");
+            //document.getElementById('start').classList.add("hidden");
+            uploadWithBar.style.display = "flex";
             document.getElementById('response').classList.remove("hidden");
-            document.getElementById('notimage').classList.add("hidden");
+            //document.getElementById('notimage').classList.add("hidden");
             // Thumbnail Preview
             document.getElementById('file-image').classList.remove("hidden");
             document.getElementById('file-image').src = URL.createObjectURL(file);
