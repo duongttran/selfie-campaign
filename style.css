@@ -175,6 +175,33 @@ p {
   margin: 0px auto 7px;
 }
 
+/* Modal */
+#exampleModalLabel {
+  text-align: center !important;
+}
+
+.modal-header,
+.modal-footer {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.upload-selfie {
+  margin: 5px 0;
+  padding: 10px;
+  box-shadow: 1px 1px 2px 0.3px #bac7d5;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.upload-selfie p {
+  margin: auto 10px;
+}
+.upload-selfie:hover {
+  background-color: #e3eaef;
+  cursor: pointer;
+}
+
 /* Uploader */
 .uploader {
   /* display: block;
@@ -211,6 +238,7 @@ p {
 }
 .uploader .drag-drop:hover {
   border-color: #00746e;
+  background-color: #b3e3e1;
 }
 .uploader .drag-drop.hover {
   border: 3px solid #b3e3e1;
@@ -254,18 +282,22 @@ p {
   transition: 0.5s;
 }
 .uploader #start .primary-btn:hover {
-  background-color: #b3e3e1;
+  border: 1px solid #d3dee8;
+  background-color: #c6c6c6;
   transition: 0.5s;
   color: white;
-  fill: white;
 }
 .uploader #start .secondary-btn {
   border: 1px solid #00a19c;
   background-color: #00a19c;
   color: white;
+  /* .filter-green {
+      filter: invert(8%) sepia(100%) saturate(6481%) hue-rotate(246deg) brightness(102%) contrast(143%);
+  } */
 }
 .uploader #start .secondary-btn:hover {
-  background-color: #b3e3e1;
+  border: 1px solid #b3e3e1;
+  background-color: #80d0ce;
   transition: 0.5s;
   color: #4dbdba;
 }
@@ -320,22 +352,12 @@ p {
       transition: .5s;
   } */
 }
-.uploader .upload-selfie {
-  margin: 5px 0;
-  padding: 10px;
-  box-shadow: 1px 1px 2px 0.3px #d3dee8;
-  display: flex;
-  align-items: center;
-}
-.uploader .upload-selfie p {
-  margin: auto 10px;
-}
-.uploader .upload-selfie .selfie-info {
+.uploader .selfie-info {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.uploader .upload-selfie .selfie-info .selfie-attach {
+.uploader .selfie-info .selfie-attach {
   width: 56px;
   height: 56px;
   padding: 10px;
@@ -346,24 +368,24 @@ p {
   align-items: center;
   margin-right: 10px;
 }
-.uploader .upload-selfie .selfie-info .selfie-attach .img-attach {
+.uploader .selfie-info .selfie-attach .img-attach {
   object-fit: cover;
   max-width: 40px;
   max-height: 35px;
   vertical-align: middle;
 }
-.uploader .upload-selfie .upload-title {
+.uploader .upload-title {
   width: 20rem;
   word-wrap: break-word;
 }
-.uploader .upload-selfie .upload-title p {
+.uploader .upload-title p {
   margin: 5px 0;
 }
-.uploader .upload-selfie .upload-title .upload-status {
+.uploader .upload-title .upload-status {
   color: #a8a8a8;
   font-weight: 200;
 }
-.uploader .upload-selfie .progress-bar {
+.uploader .progress-bar {
   width: 165px;
   height: 12px;
   border-radius: 4px;
@@ -371,22 +393,22 @@ p {
   margin-left: auto;
   margin-right: 20px;
 }
-.uploader .upload-selfie .progress-bar .upload-progress {
+.uploader .progress-bar .upload-progress {
   border-radius: 4px;
   background-color: #fca216;
   width: 165px;
   max-width: 70%;
   height: 12px;
 }
-.uploader .upload-selfie .closeIcon {
+.uploader .closeIcon {
   max-width: 16px;
   height: 16px;
   margin-right: 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.uploader .upload-selfie .closeIcon:hover {
-  opacity: 0.75;
+.uploader .closeIcon:hover {
+  opacity: 0.5;
   transform: scale(0.75);
 }
 .uploader .upload-with-progress {
@@ -483,7 +505,7 @@ p {
   background-color: #b3e3e1;
 }
 .uploader #file-image {
-  border: 2px solid black;
+  border: 1px solid #eee;
   display: inline;
   margin: auto;
   width: 40px;
@@ -502,6 +524,34 @@ p {
 .uploader #notimage.hidden {
   display: none;
 }
+@keyframes goUp {
+  0% {
+    width: 0px;
+    background-color: grey;
+  }
+  50% {
+    width: 150px;
+    background-color: gold;
+  }
+  100% {
+    width: 300px;
+    background-color: green;
+  }
+}
+@-webkit-keyframes goUp {
+  0% {
+    width: 0px;
+    background-color: grey;
+  }
+  50% {
+    width: 150px;
+    background-color: gold;
+  }
+  100% {
+    width: 300px;
+    background-color: green;
+  }
+}
 .uploader progress,
 .uploader .progress {
   border-radius: 4px;
@@ -518,14 +568,22 @@ p {
 .uploader .progress[value]::-webkit-progress-bar {
   border-radius: 4px;
   background-color: #eee;
+  animation: goUp 3s infinite;
+  -webkit-animation: goUp 3s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 }
 .uploader .progress[value]::-webkit-progress-value {
-  background: linear-gradient(to right, #6c6c6c 0%, #763f98 50%);
+  background-color: #0b882f;
   border-radius: 4px;
 }
 .uploader .progress[value]::-moz-progress-bar {
-  background: linear-gradient(to right, #6c6c6c 0%, #763f98 50%);
+  background-color: #0b882f;
   border-radius: 4px;
+  animation: goUp 3s infinite;
+  -webkit-animation: goUp 3s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 }
 .uploader input[type=file] {
   display: none;

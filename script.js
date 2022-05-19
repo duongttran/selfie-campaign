@@ -39,16 +39,13 @@ function removeUpload() {
     if (confirm("Are you sure you want to remove your upload?")) {
         uploadWithBar.style.display = "none";
     }
-
 }
 
-/* File Upload */
+/* -----File Upload----- */
 
 function ekUpload() {
     function Init() {
-
         console.log("Upload Initialised");
-
         var fileSelect = document.getElementById('file-upload'),
             fileDrag = document.getElementById('file-drag'),
             submitButton = document.getElementById('submit-button');

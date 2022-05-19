@@ -173,7 +173,7 @@ p {
                     max-width: 245px;
                     min-height: 150px;
                     margin: 0 auto;
-                    transition: all .2s ease;
+                    transition: all 0.2s ease;
                     //transition: .5s;
                     &:hover {
                         transform: scale(1.2);
@@ -191,6 +191,35 @@ p {
                 margin: 0px auto 7px;
             }
         }
+    }
+}
+
+
+/* Modal */
+
+#exampleModalLabel {
+    text-align: center!important;
+}
+
+.modal-header,
+.modal-footer {
+    border-top: none!important;
+    border-bottom: none!important;
+}
+
+.upload-selfie {
+    margin: 5px 0;
+    padding: 10px;
+    box-shadow: 1px 1px 2px 0.3px $color-blue-grays-200;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    p {
+        margin: auto 10px;
+    }
+    &:hover {
+        background-color: #e3eaef;
+        cursor: pointer;
     }
 }
 
@@ -226,11 +255,12 @@ p {
         float: left;
         clear: both;
         padding: 2.5rem 1.5rem;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
         user-select: none;
         margin: 20px auto;
         &:hover {
             border-color: $color-primary-900;
+            background-color: $color-primary-100;
         }
         &.hover {
             border: 3px solid $color-primary-100;
@@ -254,7 +284,7 @@ p {
         }
         .img-upload {
             img {
-                transition: all .2s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 &:hover {
                     transform: scale(1.2);
                 }
@@ -277,12 +307,12 @@ p {
             border: 1px solid $color-blue-grays-100;
             border-radius: 4px;
             background-color: white;
-            transition: .5s;
+            transition: 0.5s;
             &:hover {
-                background-color: $color-primary-100;
-                transition: .5s;
+                border: 1px solid $color-blue-grays-100;
+                background-color: $color-grays-100;
+                transition: 0.5s;
                 color: white;
-                fill: white;
             }
         }
         .secondary-btn {
@@ -290,10 +320,14 @@ p {
             background-color: $color-primary-500;
             color: white;
             &:hover {
-                background-color: $color-primary-100;
-                transition: .5s;
+                border: 1px solid $color-primary-100;
+                background-color: $color-primary-200;
+                transition: 0.5s;
                 color: $color-primary-300;
             }
+            /* .filter-green {
+                filter: invert(8%) sepia(100%) saturate(6481%) hue-rotate(246deg) brightness(102%) contrast(143%);
+            } */
         }
     }
     #response {
@@ -304,7 +338,7 @@ p {
             display: none;
         }
         #messages {
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
     }
     .success-upload {
@@ -317,7 +351,7 @@ p {
                 /* animation-name: example;
                 animation-duration: 2.5s;
                 animation-iteration-count: 2; */
-                transition: .5s;
+                transition: 0.5s;
                 /* &:hover {
                     transform: scale(1.2);
                     transition: .5s;
@@ -347,78 +381,66 @@ p {
             } */
         }
     }
-    .upload-selfie {
-        margin: 5px 0;
-        padding: 10px;
-        //box-shadow: 1px 1px 2px $color-blue-grays-100;
-        box-shadow: 1px 1px 2px 0.3px $color-blue-grays-100;
+    .selfie-info {
         display: flex;
         align-items: center;
-        p {
-            //margin-bottom: 0px !important;
-            margin: auto 10px;
-        }
-        .selfie-info {
+        justify-content: space-evenly;
+        //border: 2px solid green;
+        .selfie-attach {
+            width: 56px;
+            height: 56px;
+            padding: 10px;
+            border: 1px solid $color-blue-grays-100;
+            border-radius: 8px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-evenly;
-            //border: 2px solid green;
-            .selfie-attach {
-                width: 56px;
-                height: 56px;
-                padding: 10px;
-                border: 1px solid $color-blue-grays-100;
-                border-radius: 8px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-                .img-attach {
-                    object-fit: cover;
-                    max-width: 40px;
-                    max-height: 35px;
-                    vertical-align: middle;
-                }
+            margin-right: 10px;
+            .img-attach {
+                object-fit: cover;
+                max-width: 40px;
+                max-height: 35px;
+                vertical-align: middle;
             }
         }
-        .upload-title {
-            width: 20rem;
-            //border: 2px red solid;
-            word-wrap: break-word;
-            p {
-                margin: 5px 0;
-            }
-            .upload-status {
-                color: $color-grays-200;
-                font-weight: 200;
-            }
+    }
+    .upload-title {
+        width: 20rem;
+        //border: 2px red solid;
+        word-wrap: break-word;
+        p {
+            margin: 5px 0;
         }
-        .progress-bar {
-            width: 165px;
-            height: 12px;
+        .upload-status {
+            color: $color-grays-200;
+            font-weight: 200;
+        }
+    }
+    .progress-bar {
+        width: 165px;
+        height: 12px;
+        border-radius: 4px;
+        background-color: $color-grays-50;
+        margin-left: auto;
+        margin-right: 20px;
+        .upload-progress {
             border-radius: 4px;
-            background-color: $color-grays-50;
-            margin-left: auto;
-            margin-right: 20px;
-            .upload-progress {
-                border-radius: 4px;
-                background-color: $color-yellow-800;
-                width: 165px;
-                max-width: 70%;
-                height: 12px;
-            }
+            background-color: $color-yellow-800;
+            width: 165px;
+            max-width: 70%;
+            height: 12px;
         }
-        .closeIcon {
-            max-width: 16px;
-            height: 16px;
-            //margin-left: auto;
-            margin-right: 20px;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            &:hover {
-                opacity: 0.75;
-                transform: scale(0.75);
-            }
+    }
+    .closeIcon {
+        max-width: 16px;
+        height: 16px;
+        //margin-left: auto;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            opacity: 0.5;
+            transform: scale(0.75);
         }
     }
     .upload-with-progress {
@@ -517,7 +539,7 @@ p {
         }
     }
     #file-image {
-        border: 2px solid black;
+        border: 1px solid #eee;
         display: inline;
         margin: auto;
         width: 40px;
@@ -534,6 +556,34 @@ p {
         width: 100%;
         &.hidden {
             display: none;
+        }
+    }
+    @keyframes goUp {
+        0% {
+            width: 0px;
+            background-color: grey;
+        }
+        50% {
+            width: 150px;
+            background-color: gold;
+        }
+        100% {
+            width: 300px;
+            background-color: green;
+        }
+    }
+    @-webkit-keyframes goUp {
+        0% {
+            width: 0px;
+            background-color: grey;
+        }
+        50% {
+            width: 150px;
+            background-color: gold;
+        }
+        100% {
+            width: 300px;
+            background-color: green;
         }
     }
     progress,
@@ -553,14 +603,23 @@ p {
     .progress[value]::-webkit-progress-bar {
         border-radius: 4px;
         background-color: #eee;
+        animation: goUp 3s infinite;
+        -webkit-animation: goUp 3s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
     }
     .progress[value]::-webkit-progress-value {
-        background: linear-gradient(to right, darken(grey, 8%) 0%, $color-purple-500 50%);
+        //background: linear-gradient(to right, darken(grey, 8%) 0%, $color-purple-500 50%); 
+        background-color: $color-communication-success-green;
         border-radius: 4px;
     }
     .progress[value]::-moz-progress-bar {
-        background: linear-gradient(to right, darken(grey, 8%) 0%, $color-purple-500 50%);
+        background-color: $color-communication-success-green;
         border-radius: 4px;
+        animation: goUp 3s infinite;
+        -webkit-animation: goUp 3s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
     }
     input[type="file"] {
         display: none;
@@ -654,10 +713,10 @@ p {
                 margin-top: 5%;
             }
             .large-view {
-                display: none!important;
+                display: none !important;
             }
             .small-view {
-                display: block!important;
+                display: block !important;
             }
             h6 {
                 padding: 5% 40px;
