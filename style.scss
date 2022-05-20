@@ -392,6 +392,7 @@ p {
             padding: 10px;
             border: 1px solid $color-blue-grays-100;
             border-radius: 8px;
+            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -558,7 +559,7 @@ p {
             display: none;
         }
     }
-    @keyframes goUp {
+    /*     @keyframes goUp {
         0% {
             width: 0px;
             background-color: grey;
@@ -585,7 +586,7 @@ p {
             width: 300px;
             background-color: green;
         }
-    }
+    } */
     progress,
     .progress {
         // appearance: none;
@@ -603,10 +604,10 @@ p {
     .progress[value]::-webkit-progress-bar {
         border-radius: 4px;
         background-color: #eee;
-        animation: goUp 3s infinite;
+        /* animation: goUp 3s infinite;
         -webkit-animation: goUp 3s;
         animation-timing-function: ease-in-out;
-        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out; */
     }
     .progress[value]::-webkit-progress-value {
         //background: linear-gradient(to right, darken(grey, 8%) 0%, $color-purple-500 50%); 
@@ -616,10 +617,10 @@ p {
     .progress[value]::-moz-progress-bar {
         background-color: $color-communication-success-green;
         border-radius: 4px;
-        animation: goUp 3s infinite;
+        /*         animation: goUp 3s infinite;
         -webkit-animation: goUp 3s;
         animation-timing-function: ease-in-out;
-        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out; */
     }
     input[type="file"] {
         display: none;
@@ -723,6 +724,21 @@ p {
             }
         }
     }
+    .selfie-info {
+        display: inline-block;
+        //border: 2px solid pink;
+        max-width: 200px;
+        width: 100%;
+    }
+    .selfie-attach {
+        border: 2px solid blue;
+    }
+    /* .upload-title {
+        border: 2px solid yellow;
+        max-width: 200px;
+        width: 100%;
+        flex-shrink: 0;
+    } */
     .success-upload {
         text-align: center;
         .img-upload {

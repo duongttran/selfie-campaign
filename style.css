@@ -218,6 +218,34 @@ p {
   margin: 60px auto;
   z-index: 1000;
   background-color: white;
+  /*     @keyframes goUp {
+      0% {
+          width: 0px;
+          background-color: grey;
+      }
+      50% {
+          width: 150px;
+          background-color: gold;
+      }
+      100% {
+          width: 300px;
+          background-color: green;
+      }
+  }
+  @-webkit-keyframes goUp {
+      0% {
+          width: 0px;
+          background-color: grey;
+      }
+      50% {
+          width: 150px;
+          background-color: gold;
+      }
+      100% {
+          width: 300px;
+          background-color: green;
+      }
+  } */
 }
 .uploader h5 {
   margin-top: 10px;
@@ -363,6 +391,7 @@ p {
   padding: 10px;
   border: 1px solid #d3dee8;
   border-radius: 8px;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,34 +553,6 @@ p {
 .uploader #notimage.hidden {
   display: none;
 }
-@keyframes goUp {
-  0% {
-    width: 0px;
-    background-color: grey;
-  }
-  50% {
-    width: 150px;
-    background-color: gold;
-  }
-  100% {
-    width: 300px;
-    background-color: green;
-  }
-}
-@-webkit-keyframes goUp {
-  0% {
-    width: 0px;
-    background-color: grey;
-  }
-  50% {
-    width: 150px;
-    background-color: gold;
-  }
-  100% {
-    width: 300px;
-    background-color: green;
-  }
-}
 .uploader progress,
 .uploader .progress {
   border-radius: 4px;
@@ -568,10 +569,10 @@ p {
 .uploader .progress[value]::-webkit-progress-bar {
   border-radius: 4px;
   background-color: #eee;
-  animation: goUp 3s infinite;
+  /* animation: goUp 3s infinite;
   -webkit-animation: goUp 3s;
   animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out; */
 }
 .uploader .progress[value]::-webkit-progress-value {
   background-color: #0b882f;
@@ -580,10 +581,10 @@ p {
 .uploader .progress[value]::-moz-progress-bar {
   background-color: #0b882f;
   border-radius: 4px;
-  animation: goUp 3s infinite;
+  /*         animation: goUp 3s infinite;
   -webkit-animation: goUp 3s;
   animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out; */
 }
 .uploader input[type=file] {
   display: none;
@@ -708,6 +709,22 @@ p {
     padding: 5% 40px;
   }
 
+  .selfie-info {
+    display: inline-block;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .selfie-attach {
+    border: 2px solid blue;
+  }
+
+  /* .upload-title {
+      border: 2px solid yellow;
+      max-width: 200px;
+      width: 100%;
+      flex-shrink: 0;
+  } */
   .success-upload {
     text-align: center;
   }

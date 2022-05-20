@@ -47,10 +47,14 @@ function ekUpload() {
     function Init() {
         console.log("Upload Initialised");
         var fileSelect = document.getElementById('file-upload'),
+            fileSelectLaunch = document.getElementById('file-upload-launch'),
+            fileSelectLaunch01 = document.getElementById('file-upload-launch01'),
             fileDrag = document.getElementById('file-drag'),
             submitButton = document.getElementById('submit-button');
 
         fileSelect.addEventListener('change', fileSelectHandler, false);
+        fileSelectLaunch.addEventListener('change', fileSelectHandler, false);
+        fileSelectLaunch01.addEventListener('change', fileSelectHandler, false);
 
         // Is XHR2 available?
         var xhr = new XMLHttpRequest();
@@ -74,6 +78,7 @@ function ekUpload() {
     function fileSelectHandler(e) {
         // Fetch FileList object
         var files = e.target.files || e.dataTransfer.files;
+        console.log(files);
 
         // Cancel event and hover styling
         fileDragHover(e);
